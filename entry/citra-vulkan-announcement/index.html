@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta name="theme-color" content="#FF8E03">
+        <meta property="og:title" content="The Vulkan-o erupts - Citra Vulkan is here! &middot; Citra" />
+        <meta property="og:site_name" content="Citra" />
+        <meta property="og:url" content="https://citra-emu.org/entry/citra-vulkan-announcement/" />
+            <meta property="og:description" content="Hey there, Citra fans! (We haven&rsquo;t used that one for a while, have we?)
+You&rsquo;ve all wanted it and we&rsquo;ve heard your cries and pleas. Vulkan has arrived and is here to stay, available now in the latest Citra release!
+Why Vulkan? Since the dawn of time — well, since Citra&rsquo;s creation — many, many users have requested we add support for the Vulkan Graphics API; providing better performance in many cases and better support on devices, especially Android." />
+<meta name="description" content="Hey there, Citra fans! (We haven&rsquo;t used that one for a while, have we?)
+You&rsquo;ve all wanted it and we&rsquo;ve heard your cries and pleas. Vulkan has arrived and is here to stay, available now in the latest Citra release!
+Why Vulkan? Since the dawn of time — well, since Citra&rsquo;s creation — many, many users have requested we add support for the Vulkan Graphics API; providing better performance in many cases and better support on devices, especially Android." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://citra-emu.org/images/banners/index.png" />
+<meta property="og:article:published_time" content="2023-09-15T22:00:00&#43;01:00" />
+<meta property="og:article:tag" content="feature-update" />
+
+
+        <link rel="icon" href="https://citra-emu.org/favicon.ico" />
+        <link rel="shortcut icon" href="https://citra-emu.org/favicon.ico" type="image/x-icon" />
+        <link rel="canonical" href="https://citra-emu.org/entry/citra-vulkan-announcement/">
+
+        
+
+        <title>The Vulkan-o erupts - Citra Vulkan is here! - Citra</title>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Dosis" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://citra-emu.org/scss/style.min.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+        
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-73966905-1', 'auto');
+                ga('send', 'pageview');
+            </script>
+        
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-wrapper navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">&nbsp;</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="index-1 first"><a href="/" title="Blog Posts">Blog</a></li>
+                <li class="index-2"><a href="/download/" title="Download Citra">Download</a></li>
+                <li class="index-3"><a href="/help/" title="Help">Help</a></li>
+                <li class="index-4"><a href="/wiki/faq/" title="Frequently Asked Questions">FAQ</a></li>
+                <li class="index-5"><a href="/game/" title="Game Compatibility">Compatibility</a></li>
+                <li class="index-6"><a href="/wiki/home/" title="Wiki Homepage">Wiki</a></li>
+
+                <li class="index-7 dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       role="button" aria-haspopup="true" aria-expanded="false">
+                        Social <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="index-1 first"><a href="/rules/" title="Community Rules">Rules</a></li>
+                        <li class="index-2"><a href="https://community.citra-emu.org/" title="Forums">Community Forums</a></li>
+                        <li class="index-3 last"><a href="/discord/" title="Discord Server">Discord Chat</a></li>
+                    </ul>
+                </li>
+
+                <li class="index-8 dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                aria-haspopup="true" aria-expanded="false">
+                        Media <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="index-1 first"><a href="/screenshots/" title="Screenshots">Screenshots</a></li>
+                        <li class="index-2 last"><a href="https://www.youtube.com/channel/UC_dcdgzuapBtAY4ol3x-90Q"
+                                                    title="YouTube Channel">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li class="index-9 last"><a href="https://www.patreon.com/citraemu" title="Patreon">Patreon</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+        <div id="mainContainer" class="container" >
+            <div class="row">
+                
+            </div>
+
+            <div class="row row-fluid">
+                <div id="content" class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-right">
+                    
+  <a href="https://citra-emu.org/entry/citra-vulkan-announcement/">
+  <div class="entry-embed-header">
+      
+      <div class="entry-embed" style="background: url('https://citra-emu.org/images/banners/citra-vulkan-announcement.png')">
+          <header>
+              <h1>The Vulkan-o erupts - Citra Vulkan is here!</h1>
+          </header>
+      </div>
+
+      
+      <div class="entry-meta" style="position: absolute; top: 5px; right: 20px;">
+          September 15 2023
+      </div>
+
+      
+      <div class="entry-meta" style="position: absolute; top: 45px; right: 20px;">
+          feature-update
+      </div>
+      
+  </div>
+</a>
+
+
+  <div class="entry-content">
+    <p>Hey there, Citra fans! (We haven&rsquo;t used that one for a while, have we?)</p>
+<p>You&rsquo;ve all wanted it and we&rsquo;ve heard your cries and pleas. Vulkan has arrived and is here to stay, available now in the latest Citra release!</p>
+<h1 id="why-vulkan">Why Vulkan?</h1>
+<p>Since the dawn of time — well, since Citra&rsquo;s creation — many, <em>many</em> users have requested we add support for the <a href="https://en.wikipedia.org/wiki/Vulkan.">Vulkan Graphics API</a>; providing better performance in many cases and better support on devices, especially Android. There&rsquo;s a lot to love, but oh boy, was it ever a challenge!</p>
+
+
+
+
+
+
+
+<div class="container" style="width: 100%;">
+    
+    <div class="is-img-preview">
+    
+        
+        
+        
+        
+        <div class="theme-table-image col-sm-6">
+            <figure style="padding: 0px;">
+                
+                    <a href="sm3dlogl.png" title="OpenGL on Intel Core i3-1005G1. FPS: 75 Speed: 125%">
+                        <img src="sm3dlogl.png" alt="OpenGL on Intel Core i3-1005G1. FPS: 75 Speed: 125%" />
+                    </a>
+                
+                <figcaption>
+                    <h4>
+                        OpenGL on Intel Core i3-1005G1. FPS: 75 Speed: 125%
+                    </h4>
+                </figcaption>
+            </figure>
+        </div>
+    
+        
+        
+        
+        
+        <div class="theme-table-image col-sm-6">
+            <figure style="padding: 0px;">
+                
+                    <a href="sm3dlvk.png" title="Vulkan on Intel Core i3-1005G1.FPS: 115 Speed: 193%">
+                        <img src="sm3dlvk.png" alt="Vulkan on Intel Core i3-1005G1.FPS: 115 Speed: 193%" />
+                    </a>
+                
+                <figcaption>
+                    <h4>
+                        Vulkan on Intel Core i3-1005G1.FPS: 115 Speed: 193%
+                    </h4>
+                </figcaption>
+            </figure>
+        </div>
+    
+    </div>
+</div>
+
+<p>Vulkan support is also becoming a standard feature across many emulators, such as <a href="https://dolphin-emu.org/">Dolphin</a>, <a href="https://ryujinx.org/">Ryujinx</a>, <a href="https://rpcs3.net/">RPCS3</a>, <a href="https://yuzu-emu.org/">yuzu</a>, and many others.
+As we&rsquo;ve mentioned before, Citra is heading into the modern age. OpenGL is considered an ageing graphics API, with buggy and slow drivers, and performance bottlenecks. A modern graphics API like Vulkan is perfect for our vision of the New™️ Citra.</p>
+<p>If you haven&rsquo;t read it already, we have posted a detailed teaser about Vulkan in Citra in our <a href="https://citra-emu.org/entry/citra-progress-report-2023-q1/#surprise-announcement">2020 Q2 ~ 2023 Q1 Progress Report</a>.
+We thoroughly recommend you give that a read, as it&rsquo;s a really good recap of the development of Vulkan at the time of writing.</p>
+<h1 id="where-to-get-vulkan">Where to get Vulkan</h1>
+<p>If you&rsquo;d rather jump straight into the action, Citra with the Vulkan renderer can be found in the latest Nightly release, either as a <a href="https://github.com/citra-emu/citra-nightly/releases">standalone build</a> or from our <a href="https://citra-emu.org/download/">installer</a>.</p>
+<h1 id="what-to-expect">What to expect</h1>
+<p>As with anything to do with emulation, nothing is ever perfect. Things are always evolving and changing, and this is no different.</p>
+<h2 id="android">Android</h2>
+<p>Attention Android users! We have not forgotten about you! We are still here, making your gaming experience on mobile even better!</p>
+<p>A very large number of Citra users currently use a phone with a Mali GPU. This isn&rsquo;t something specific to Citra users, the majority of phones currently on the market have them! Especially with Samsung phones, if you live anywhere in the world apart from the United States or China, there&rsquo;s a high chance you&rsquo;ll get one with a Mali GPU.</p>
+<p>Sadly, these GPUs tend to have rather poor OpenGL ES drivers, so Citra&rsquo;s performance on them generally left a lot to be desired and bordered on unplayable for most 3DS titles. Performance improved significantly for these devices after some of the initial <a href="https://github.com/citra-emu/citra/pull/6375">rasterizer cache refactor</a> work on our graphics backend was done, making many less demanding titles capable of reaching 100% emulation speed. However, many titles were still running short of full speed.</p>
+<p>Now, these concerns can be laid to rest! Mali&rsquo;s vastly better Vulkan drivers allow for better, and smoother, gameplay when using Citra&rsquo;s Vulkan backend. You can now easily go beyond 100% emulation speed on most, if not all, games. And with the addition of asynchronous shader compilation, in-game stutter due to shaders building is greatly reduced, leaving you with a more seamless gameplay experience.</p>
+<figure>
+   <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+      <video preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls>
+         <source src="glesvk.mp4" type="video/mp4">
+         Your browser doesn't support mp4 video. :(
+      </video>
+   </div>
+   
+   <figcaption>
+      <h4>
+         Just look at the difference!
+      </h4>
+   </figcaption>
+   
+</figure>
+
+<p>If we could rewind to the terrible OpenGL ES drivers on Mali GPUs we mentioned before for a moment; another caveat of these drivers is the amount of bugs in them. This would cause graphical glitches in games, from characters being the wrong colors, to entire landscapes being rendered incorrectly.
+Of course, this would affect the gameplay just as much as poor performance would. Who wants to play a game if it doesn&rsquo;t even look right?
+Thankfully, this is another area of concern that has been fixed by the Citra Vulkan backend on Android.</p>
+<p>Bringing us back to the first ever game Citra launched, The Legend of Zelda: Ocarina of Time 3D is one such game that has graphical glitches caused by the Mali OpenGL ES drivers fixed with Vulkan:</p>
+<figure>
+   <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+      <video preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls>
+         <source src="oot3d.mp4" type="video/mp4">
+         Your browser doesn't support mp4 video. :(
+      </video>
+   </div>
+   
+   <figcaption>
+      <h4>
+         We&#39;ve been waiting for you, Hero of Time.
+      </h4>
+   </figcaption>
+   
+</figure>
+
+<h2 id="macos">macOS</h2>
+<p>Great news for macOS (Apple Silicon and Intel) users! Citra once again fully supports macOS devices!</p>
+<p>&ldquo;Well, what does that have to do with Vulkan?&rdquo; one might ask&hellip;</p>
+<p>The answer is a bit complicated.
+Citra used to require only OpenGL 3.3 in order to run, which macOS still technically supports. However, after many revisions of our graphics backend, that requirement was upped to at least OpenGL 4.3. Unlike all other major operating systems, Apple decided to deprecate OpenGL support. This means that macOS does not support anything beyond OpenGL 4.1, which doesn&rsquo;t meet Citra&rsquo;s new requirements. As such, Citra could no longer run on macOS.</p>
+<p>&ldquo;Does macOS support Vulkan then?&rdquo; another might ask&hellip;</p>
+<p>Sadly, the answer to that is a &ldquo;no&rdquo;. Apple, in their infinite wisdom, decided to create a proprietary graphics API called &ldquo;Metal&rdquo;, and wants all apps to use that instead. However, that would require us to create a graphics backend that is only relevant for macOS, and no other platform. Given Citra&rsquo;s cross-platform nature, that wouldn&rsquo;t be ideal. There is a solution though: <a href="https://github.com/KhronosGroup/MoltenVK">MoltenVK</a>. This is a translation layer that translates Vulkan calls into Metal calls. Through this translation, Citra can run on macOS once again!</p>
+<p>To use Vulkan, go to <code>Citra &gt; Preferences &gt; Graphics &gt; Advanced tab</code> and set the Graphics API option to <code>Vulkan</code>. Additionally, the long-standing white/grey-screen bug, that required you to resize your Citra window in order to see anything being rendered, has been fixed with this API!</p>
+<h2 id="amd">AMD</h2>
+<p>There is another group of users that will benefit greatly from Vulkan. Namely, Windows users with older AMD GPUs.</p>
+<p>A while back, AMD massively improved their notoriously bad OpenGL drivers. This improvement saw those AMD GPU users, who were struggling to hit 100% emulation speed before, suddenly achieving up to 10 times that emulation speed. Whilst this was incredible news for AMD users, there was a caveat to this: only GCN 4.0 GPUs and newer received these improved drivers. For anyone using an older AMD GPU architecture, they are still stuck on the old, and really bad, OpenGL drivers.</p>
+<p>Luckily for them, the Vulkan drivers on those GPUs are still pretty good! As such, they&rsquo;ll no longer have to deal with sub-par performance, and can even compete with the new kids in performance!</p>
+<h1 id="what-not-to-expect">What NOT to expect</h1>
+<p>Keep in mind that Vulkan is a very new, and very big, addition to Citra. There are bound to be many bugs and glitches that slipped through the cracks. However, we&rsquo;ve tried to make sure that what renders properly in OpenGL, renders properly in Vulkan. If you find a title where that isn&rsquo;t the case, please do let us know! With your testing and reports, we&rsquo;ll keep working to improve our Vulkan backend!</p>
+<p>Some quick notes:</p>
+<ul>
+<li>
+<p>Do not expect Vulkan to fix old emulation bugs that are not related to graphics or rendering.</p>
+</li>
+<li>
+<p>Do not expect Vulkan to render games correctly that our OpenGL backend does not render correctly. Aside from OpenGL or Vulkan driver bugs, switching between the APIs shouldn&rsquo;t show any visual difference. If that <em>is</em> the case for you, please report this to us!</p>
+</li>
+<li>
+<p>Do not expect Vulkan to be an improvement over OpenGL in every aspect, on every device. Whilst Vulkan provides better performance than OpenGL in most cases, that is not always the case.</p>
+</li>
+<li>
+<p>As of writing, Vulkan does not have full feature parity with our OpenGL backend. We will list some of the missing features below.</p>
+</li>
+<li>
+<p>Whilst Vulkan currently has a disk pipeline cache, as well as runtime shader caching, an actual Disk Shader Cache for it is not yet implemented. As such, you may still experience some shader stutter at the start of each session until that is properly implemented.</p>
+</li>
+<li>
+<p>Recording your gameplay using Video Dumping is not yet implemented.</p>
+</li>
+<li>
+<p>Texture Filtering and Post-Processing Shaders are not yet implemented.</p>
+</li>
+</ul>
+<p>As always, if you need support with anything, head to our <a href="https://discord.gg/FAXfZV9">Discord server</a> or our <a href="https://community.citra-emu.org/">community forums</a>.</p>
+<h1 id="requirements">Requirements</h1>
+<p>As with our OpenGL backend, we have minimum hardware requirements for running Vulkan.</p>
+<p>Any device that supports Vulkan 1.1 or above will work with our Vulkan backend. Be it macOS, AMD, or Android. As long as your device supports this, you’re good to go!
+However, there is an exception for Adreno 5xx devices on Android, as these GPUs do not work with our Vulkan implementation at this time. We&rsquo;ll be working to fix this with future updates, so keep your eyes peeled!</p>
+<h1 id="whats-next">What&rsquo;s next?</h1>
+<p>As mentioned, our Vulkan backend does not yet have full feature parity with our OpenGL backend. Once that parity is achieved, we plan on giving you a much more technical article about the entire Vulkan backend, sure to satisfy the curious among you.</p>
+<p>We hope this release excites you about the future of Citra as much as it excites us.
+Our greatest gratitude goes out to the countless developers involved in bringing Vulkan to Citra, but especially to <a href="https://github.com/GPUCode">GPUCode</a>. Without him, none of this would ever have been possible.
+We also express thanks to <a href="https://github.com/Steveice10">Steveice10</a>, who helped on the macOS side of things for the Vulkan release, and to <a href="https://github.com/BreadFish64">BreadFish64</a> for his expertise with Vulkan from his previous attempt to bring Vulkan to Citra.</p>
+
+  </div>
+
+  
+  
+  
+
+  <div class="entry-written-by">
+    
+      <a href="https://community.citra-emu.org/u/autumnburra">
+          <img src="https://community.citra-emu.org/user_avatar/community.citra-emu.org/autumnburra/120/273091_2.png" class="avatar">
+      </a>
+    
+    
+      <a href="https://community.citra-emu.org/u/sleepingsnake">
+          <img src="https://community.citra-emu.org/user_avatar/community.citra-emu.org/sleepingsnake/120/123364_2.png" class="avatar">
+      </a>
+    
+    
+
+    
+      <p>Written by <a href="https://community.citra-emu.org/u/autumnburra">autumnburra</a> and <a href="https://community.citra-emu.org/u/sleepingsnake">SleepingSnake</a> on Friday September 15, 2023</p>
+    
+  </div>
+
+  
+    <div class="entry-comments">
+      <div id="discourse-comments"></div>
+      <script type="text/javascript">
+        DiscourseEmbed = { discourseUrl: 'https://community.citra-emu.org/', topicId: "897225" };
+        (function() {
+          var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+          d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+        })();
+      </script>
+    </div>
+  
+
+
+                </div>
+                <div id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pull-left">
+                    <div id="advertisement" class = "ad">
+  <h3>Advertisement</h3>
+  <ins class="ad adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4126545610079023"
+       data-ad-slot="4223809695"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="tagcloud hidden-sm hidden-xs">
+  <h3>News Tag Cloud</h3>
+  <ul>
+    
+      <li><a class="taxonomy-citra-release" href="/tags/citra-release">citra-release</a></li>
+    
+      <li><a class="taxonomy-feature-update" href="/tags/feature-update">feature-update</a></li>
+    
+      <li><a class="taxonomy-progress-report" href="/tags/progress-report">progress-report</a></li>
+    
+  </ul>
+</div>
+
+<div id="twitter" class="hidden-sm hidden-xs">
+  <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/citraemu?ref_src=twsrc%5Etfw">Tweet Feed</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="container">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <h1>Citra</h1>
+                    <a href="/entry">Blog</a>
+                    <a href="/download/">Downloads</a>
+                    <a href="/screenshots/">Screenshots</a>
+                    <a href="https://www.patreon.com/citraemu">Patreon</a>
+                    <a href="/donate/">Donate</a>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>Documentation</h1>
+                    <a href="/help/">Help Documents</a>
+                    <a href="/game/">Compatibility</a>
+                    <a href="/wiki/home/">Wiki</a>
+                    <a href="/wiki/faq/">FAQ</a>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>Blog</h1>
+                    <a href="/entry">News &amp; Articles</a>
+                    <a href="https://citra-emu.org/index.xml">RSS 2.0</a>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>Social</h1>
+                    <a href="https://www.youtube.com/channel/UC_dcdgzuapBtAY4ol3x-90Q">YouTube</a>
+                    <a href="https://www.facebook.com/citra.emu">Facebook</a>
+                    <a href="https://twitter.com/citraemu">Twitter</a>
+                    <a href="https://community.citra-emu.org/">Forums</a>
+                    <a href="/discord">Discord</a>
+                    <a href="/chat">IRC</a>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>Get Involved</h1>
+                    <a href="https://github.com/citra-emu/citra">GitHub / Source</a>
+                    <a href="https://github.com/citra-emu/citra/issues">Issues</a>
+                    <a href="https://github.com/citra-emu/citra/pulls">Pull Requests</a>
+                </div>
+
+            </div>
+            <div id="footer-bottom">
+                <div id="footer-brand"></div>
+                <div id="footer-legal">Copyright © 2024 Citra Emulator Project</div>
+            </div>
+        </div>
+
+        <script src="https://citra-emu.org/js/script.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" type="text/css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			window.addEventListener("DOMContentLoaded", function() {
+			baguetteBox.run('.is-img-preview');
+			});
+		</script>
+
+        
+
+        
+    </body>
+
+</html>
