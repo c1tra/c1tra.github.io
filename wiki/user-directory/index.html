@@ -7,7 +7,7 @@
         <meta name="theme-color" content="#FF8E03">
         <meta property="og:title" content="User Directory &middot; Citra" />
         <meta property="og:site_name" content="Citra" />
-        <meta property="og:url" content="https://citra-emu.org/wiki/user-directory/" />
+        <meta property="og:url" content="https://c1tra.github.io/wiki/user-directory/" />
             <meta property="og:description" content="The User Directory Citra&rsquo;s user directory is where the emulator persists the emulated 3DS NAND, save data, extra data, and a host of other files necessary for Citra to run properly. The path of the user directory can be opened from within the Citra application with the Open Citra folder menu option. On different systems the paths are:
 on any system, the presence of a directory named user on the same directory of the executable will override the default behavior and Citra will use that instead." />
 <meta name="description" content="The User Directory Citra&rsquo;s user directory is where the emulator persists the emulated 3DS NAND, save data, extra data, and a host of other files necessary for Citra to run properly. The path of the user directory can be opened from within the Citra application with the Open Citra folder menu option. On different systems the paths are:
@@ -15,16 +15,16 @@ on any system, the presence of a directory named user on the same directory of t
 <meta property="og:type" content="website" />
 
 
-        <link rel="icon" href="https://citra-emu.org/favicon.ico" />
-        <link rel="shortcut icon" href="https://citra-emu.org/favicon.ico" type="image/x-icon" />
-        <link rel="canonical" href="https://citra-emu.org/wiki/user-directory/">
+        <link rel="icon" href="https://c1tra.github.io/favicon.ico" />
+        <link rel="shortcut icon" href="https://c1tra.github.io/favicon.ico" type="image/x-icon" />
+        <link rel="canonical" href="https://c1tra.github.io/wiki/user-directory/">
 
         
 
         <title>User Directory - Citra</title>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Dosis" rel="stylesheet">
         
-        <link rel="stylesheet" href="https://citra-emu.org/scss/style.min.css" />
+        <link rel="stylesheet" href="https://c1tra.github.io/scss/style.min.css" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
                 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -74,7 +74,7 @@ on any system, the presence of a directory named user on the same directory of t
 
                     <ul class="dropdown-menu">
                         <li class="index-1 first"><a href="/rules/" title="Community Rules">Rules</a></li>
-                        <li class="index-2"><a href="https://community.citra-emu.org/" title="Forums">Community Forums</a></li>
+                        <li class="index-2"><a href="https://community.c1tra.github.io/" title="Forums">Community Forums</a></li>
                         <li class="index-3 last"><a href="/discord/" title="Discord Server">Discord Chat</a></li>
                     </ul>
                 </li>
@@ -169,7 +169,7 @@ on any system, the presence of a directory named user on the same directory of t
 <h5 id="sysdata">sysdata</h5>
 <p>System save data is identified by a title ID, separated into TID High, the first 8 characters of the title ID, and TID Low, the last 8 characters of the title ID. Most system save data has a TID high of 00000000. An individual piece of system save data is stored in <code>sysdata/[TID Low]/[TID High]</code>. For details about the different kinds of system save data, see <a href="https://www.3dbrew.org/wiki/System_SaveData">3dbrew</a>. For first-time Citra users, there may be nothing inside the <code>sysdata</code> directory. In fact this will be the case for most Citra users, and is nothing to be alarmed about. This data will be created automatically in some cases, such as when a Mii is saved in Mii Maker. Almost none of this data is essential for Citra to run homebrew games or backups of licensed titles.</p>
 <p>There is one notable exception to the last statement. Citra requires a dump of a physical 3DS&rsquo;s config savegame in order to run a small number of games. Follow the instructions located at <a href="/wiki/dumping-config-savegame-from-a-3ds-console">Dumping Config Savegame from a 3DS Console</a> to obtain the config savegame from a 3DS console.</p>
-<p>Other system save data aside from the config savegame can be dumped from a 3DS console by an expert user and placed in the <code>sysdata</code> folder. At this time, though, many features that read from or write to system save data have not been implemented so there is currently little value in doing so. See <a href="https://discuss.citra-emu.org/d/905-nand-sysdata">this discussion topic</a> for more details about dumping system save data.</p>
+<p>Other system save data aside from the config savegame can be dumped from a 3DS console by an expert user and placed in the <code>sysdata</code> folder. At this time, though, many features that read from or write to system save data have not been implemented so there is currently little value in doing so. See <a href="https://discuss.c1tra.github.io/d/905-nand-sysdata">this discussion topic</a> for more details about dumping system save data.</p>
 <h5 id="extdata">extdata</h5>
 <p>NAND extra data always has a TID High of 00048000, so the <code>extdata</code> directory should contain a <code>00048000</code> folder, though it has been observed in Citra that there may be a <code>00000000</code> folder instead, and users have reported issues if there is both a <code>00000000</code> and <code>00048000</code> folder contained therein, so it is advised to delete the <code>00000000</code> folder if that is the case. Inside the folder may be nothing, or it may contain one or more directories named <code>F000000#</code>, where # can be the characters A-F or the numbers 0-9. Each of these folders corresponds to a TID low, which can be used to identify the type of extra data stored therein. See <a href="https://www.3dbrew.org/wiki/Extdata?section=13#NAND_Shared_Extdata">3dbrew</a> for details about the different kinds of extra data stored in NAND.</p>
 <p>At this point in time, it is possible to dump extra data from a physical 3DS&rsquo;s NAND using a save manager like <a href="https://github.com/J-D-K/JKSM">JKSM</a> and to place it in the <code>extdata</code> directory, but doing so is entirely optional and Citra does not currently emulate NAND features that utilize most of this extra data.</p>
@@ -259,7 +259,7 @@ on any system, the presence of a directory named user on the same directory of t
                 <div class="col-md-2">
                     <h1>Blog</h1>
                     <a href="/entry">News &amp; Articles</a>
-                    <a href="https://citra-emu.org/index.xml">RSS 2.0</a>
+                    <a href="https://c1tra.github.io/index.xml">RSS 2.0</a>
                 </div>
 
                 <div class="col-md-2">
@@ -267,7 +267,7 @@ on any system, the presence of a directory named user on the same directory of t
                     <a href="https://www.youtube.com/channel/UC_dcdgzuapBtAY4ol3x-90Q">YouTube</a>
                     <a href="https://www.facebook.com/citra.emu">Facebook</a>
                     <a href="https://twitter.com/citraemu">Twitter</a>
-                    <a href="https://community.citra-emu.org/">Forums</a>
+                    <a href="https://community.c1tra.github.io/">Forums</a>
                     <a href="/discord">Discord</a>
                     <a href="/chat">IRC</a>
                     </ul>
@@ -287,7 +287,7 @@ on any system, the presence of a directory named user on the same directory of t
             </div>
         </div>
 
-        <script src="https://citra-emu.org/js/script.js"></script>
+        <script src="https://c1tra.github.io/js/script.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" type="text/css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js" type="text/javascript"></script>
 

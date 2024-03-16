@@ -7,22 +7,22 @@
         <meta name="theme-color" content="#FF8E03">
         <meta property="og:title" content="Custom Textures &middot; Citra" />
         <meta property="og:site_name" content="Citra" />
-        <meta property="og:url" content="https://citra-emu.org/help/feature/custom-textures/" />
+        <meta property="og:url" content="https://c1tra.github.io/help/feature/custom-textures/" />
             <meta property="og:description" content="Custom texture features for displaying custom graphics packs." />
 <meta name="description" content="Custom texture features for displaying custom graphics packs." />
 <meta property="og:type" content="website" />
 
 
-        <link rel="icon" href="https://citra-emu.org/favicon.ico" />
-        <link rel="shortcut icon" href="https://citra-emu.org/favicon.ico" type="image/x-icon" />
-        <link rel="canonical" href="https://citra-emu.org/help/feature/custom-textures/">
+        <link rel="icon" href="https://c1tra.github.io/favicon.ico" />
+        <link rel="shortcut icon" href="https://c1tra.github.io/favicon.ico" type="image/x-icon" />
+        <link rel="canonical" href="https://c1tra.github.io/help/feature/custom-textures/">
 
         
 
         <title>Custom Textures - Citra</title>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Dosis" rel="stylesheet">
         
-        <link rel="stylesheet" href="https://citra-emu.org/scss/style.min.css" />
+        <link rel="stylesheet" href="https://c1tra.github.io/scss/style.min.css" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
                 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -72,7 +72,7 @@
 
                     <ul class="dropdown-menu">
                         <li class="index-1 first"><a href="/rules/" title="Community Rules">Rules</a></li>
-                        <li class="index-2"><a href="https://community.citra-emu.org/" title="Forums">Community Forums</a></li>
+                        <li class="index-2"><a href="https://community.c1tra.github.io/" title="Forums">Community Forums</a></li>
                         <li class="index-3 last"><a href="/discord/" title="Discord Server">Discord Chat</a></li>
                     </ul>
                 </li>
@@ -134,7 +134,7 @@
 </ul>
 <h2 id="texture-dumping">Texture dumping</h2>
 <p>Citra will dump textures when they are used by the game and uploaded from the guest VRAM to the host memory. Dumped textures may only have power-of-two dimensions in order to avoid dumping host framebuffers.</p>
-<p>The texture dumper will write a template <strong><code>pack.json</code></strong> file in the dump directory, which should be copied in the <code>load</code> folder when testing the texture pack. By default, textures will be dumped using the new hashing method. If a texture pack exists in the load folder, the dumper will use the same hashing method as that pack. Regardless of the hashing method, packs should still load correctly on any recent build of Citra. For any concerns regarding pack compatibility, possible breakages or feature requests please contact us either on <a href="https://github.com/citra-emu/citra/issues/">GitHub</a> or on our <a href="https://citra-emu.org/discord/">Discord server</a>, as this is still a very new feature.</p>
+<p>The texture dumper will write a template <strong><code>pack.json</code></strong> file in the dump directory, which should be copied in the <code>load</code> folder when testing the texture pack. By default, textures will be dumped using the new hashing method. If a texture pack exists in the load folder, the dumper will use the same hashing method as that pack. Regardless of the hashing method, packs should still load correctly on any recent build of Citra. For any concerns regarding pack compatibility, possible breakages or feature requests please contact us either on <a href="https://github.com/citra-emu/citra/issues/">GitHub</a> or on our <a href="https://c1tra.github.io/discord/">Discord server</a>, as this is still a very new feature.</p>
 <p>The filename of dumped textures is comprised of various information about the guest texture. For example, the filename <strong>&ldquo;tex1_256x256_543624189C94B105_12_mip0.png&rdquo;</strong> includes the guest texture dimensions <strong>256x256</strong>, the texture hash <strong>543624189C94B105</strong>, the guest pixel format <strong>12</strong> and the mipmap level of the texture <strong>mip0</strong></p>
 <h2 id="pack-configuration">Pack configuration</h2>
 <p>The custom textures rework introduced a new json configuration file for texture packs, which is used to distinguish between old and new packs. It contains information about the pack such as name, author, as well as other configuration options like the used hash format, automatic mipmap generation and control for texture flipping. The latter two options are <strong>unsupported</strong> when compressed texture formats are used.</p>
@@ -208,7 +208,7 @@
                 <div class="col-md-2">
                     <h1>Blog</h1>
                     <a href="/entry">News &amp; Articles</a>
-                    <a href="https://citra-emu.org/index.xml">RSS 2.0</a>
+                    <a href="https://c1tra.github.io/index.xml">RSS 2.0</a>
                 </div>
 
                 <div class="col-md-2">
@@ -216,7 +216,7 @@
                     <a href="https://www.youtube.com/channel/UC_dcdgzuapBtAY4ol3x-90Q">YouTube</a>
                     <a href="https://www.facebook.com/citra.emu">Facebook</a>
                     <a href="https://twitter.com/citraemu">Twitter</a>
-                    <a href="https://community.citra-emu.org/">Forums</a>
+                    <a href="https://community.c1tra.github.io/">Forums</a>
                     <a href="/discord">Discord</a>
                     <a href="/chat">IRC</a>
                     </ul>
@@ -236,7 +236,7 @@
             </div>
         </div>
 
-        <script src="https://citra-emu.org/js/script.js"></script>
+        <script src="https://c1tra.github.io/js/script.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" type="text/css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js" type="text/javascript"></script>
 

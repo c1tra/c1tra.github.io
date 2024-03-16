@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
       <title>Citra on Citra </title>
-    <link>https://citra-emu.org/</link>
+    <link>https://c1tra.github.io/</link>
     <language>en-US</language>
     <author>Citra</author>
     <rights>Copyright (c) 2017, Citra; all rights reserved.</rights>
@@ -9,10 +9,10 @@
     
     <item>
       <title>Blog Entries</title>
-      <link>https://citra-emu.org/entry/</link>
+      <link>https://c1tra.github.io/entry/</link>
       <pubDate>Fri, 15 Sep 2023 22:00:00 &#43;0100</pubDate>
       <author></author>
-      <guid>https://citra-emu.org/entry/</guid>
+      <guid>https://c1tra.github.io/entry/</guid>
       <description></description>
     </item>
     
